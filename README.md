@@ -60,4 +60,8 @@
 <h2>뉴스게시판 글 등록</h2>
 <img width="1426" alt="스크린샷 2022-10-10 오후 3 12 27" src="https://user-images.githubusercontent.com/86508110/194807361-c927d0f1-496e-4c3a-a677-f490fdb45694.png">
 
+<h2>게시판 댓글 기능</h2>
+<img width="1426" alt="<img width="1440" alt="스크린샷 2023-02-06 오후 6 31 29" src="https://user-images.githubusercontent.com/86508110/216937962-910b8e54-6cdb-44a5-974c-8a09291d3095.png">
+">
+
   </div>
