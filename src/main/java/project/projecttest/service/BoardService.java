@@ -31,7 +31,6 @@ public class BoardService {
         boardRepository.save(boardDto.toEntity());
         return boardDto.getId();
     }
-
     public List<Board> findAll() {
         return boardRepository.findAll();
     }

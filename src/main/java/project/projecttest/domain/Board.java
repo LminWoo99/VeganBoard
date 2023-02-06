@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -14,7 +15,6 @@ import java.util.List;
 public class Board {
 
     @Id @GeneratedValue
-    @Column(name = "board_id")
     private Long id;
     private String title;
     private String content;
@@ -26,11 +26,13 @@ public class Board {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
+    @OneToMany(mappedBy = "board")
+    private List<BoardComment> boardCommentList= new ArrayList<>();
     @Enumerated(EnumType.STRING)
     private Grade grade;
 
     @Builder
-    public Board(String title, String content, String createdBy, Grade grade, Member member) {
+    public Board(String title, String content, String createdBy, Member member,Grade grade, List<BoardComment> boardCommentList) {
         this.title = title;
         this.content = content;
         this.createdBy = createdBy;
@@ -38,6 +40,7 @@ public class Board {
         if (this.member != null) {
             member.getBoardList().remove(this);
         }
+        this.boardCommentList = boardCommentList;
 
     }
 

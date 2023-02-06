@@ -64,33 +64,33 @@
         </div>
     </div>
 </div>
-<!--<form action="boardContent.html" th:action method="post">-->
-<!--    <div class="comment-form" style="text-align: center;">-->
-<!--        <div class="comment-form2" style="width:300px;height: 200px;display: inline-block">-->
-<!--            <label for="content">댓글 달기</label>-->
-<!--            <textarea class="form-control" id="content" name="content" rows="3"></textarea>-->
-<!--            <button type="submit" class="btn btn-primary" onclick="window.location.reload()">작성</button>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</form>-->
-<!--<div class="container">-->
-<!--    <table class="table table-hover">-->
-<!--        <tr>-->
-<!--            <th>번호</th>-->
-<!--            <th>작성자</th>-->
-<!--            <th>내용</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr th:each="comment : ${comments}">-->
-<!--            <td th:text="${comment.id}"></td>-->
-<!--            <td th:text="${comment.created_by}"></td>-->
-<!--            <td th:text="${comment.content}"></td>-->
+<form action="boardContent.html" th:action method="post">
+    <div class="comment-form" style="text-align: center;">
+        <div class="comment-form2" style="width:300px;height: 200px;display: inline-block">
+            <label for="content">댓글 달기</label>
+            <textarea class="form-control" id="content" name="content" rows="5"></textarea>
+            <button type="submit" class="btn btn-primary" onclick="window.location.reload()">작성</button>
+        </div>
+    </div>
+</form>
+<div class="container">
+    <table class="table table-hover">
+        <tr>
+            <th>번호</th>
+            <th>작성자</th>
+            <th>내용</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="boardcomment : ${comments}">
+            <td th:text="${boardcomment.id}"></td>
+            <td th:text="${boardcomment.created_by}"></td>
+            <td th:text="${boardcomment.content}"></td>
 
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--    </table>-->
-<!--</div>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 <footer class="py-5 text-center">
     <p>&copy; VGM</p>

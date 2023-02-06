@@ -1,10 +1,11 @@
 spring:
   datasource:
-    url:  jdbc:h2~/veganproject2
+    url:  jdbc:h2:tcp://localhost/~/veganproject2
     username: sa
     password:
     driver-class-name: org.h2.Driver
   jpa:
+    defer-datasource-initialization: true
     hibernate:
       ddl-auto: create
     properties:
